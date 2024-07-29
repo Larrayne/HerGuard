@@ -1,38 +1,17 @@
-.App {
-  text-align: center;
+.custom-bg {
+  background-color: #ffcccc; /* Light pink background */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-pink {
+  background-color: #ffcccc; /* Light pink form background */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.custom-button {
+  background-color: #007FFF; /* Light blue button */
+  border: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-button:hover {
+  background-color: #007FFF; /* Keep light blue button on hover */
 }
