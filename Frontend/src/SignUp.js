@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css'; // Make sure to import your CSS file
+import './App.css'; 
 
 function SignUp() {
     return (
@@ -32,9 +32,9 @@ function SignUp() {
                         <label htmlFor='confirm-password'><strong>Re-enter Password</strong></label>
                         <input type='password' placeholder='Re-enter Password' className='form-control rounded-0' />
                     </div>
-                    <button className='btn custom-button w-100 rounded-0'>Sign Up</button>
+                    <button type='submit' className='custom-button w-100 rounded-0'>Sign Up</button>
                     <p></p>
-                    <Link to="/" className='btn custom-button w-100 rounded-0 text-decoration-none'>Login</Link>
+                    <Link to="/" className='custom-button w-100 rounded-0 text-decoration-none'>Login</Link>
                 </form>
             </div>
         </div>

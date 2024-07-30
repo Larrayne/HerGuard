@@ -15,9 +15,13 @@ function Login() {
                         <label htmlFor='password'><strong>Password</strong></label>
                         <input type='password' placeholder='Enter Password' className='form-control rounded-0' />
                     </div>
-                    <button className='btn custom-button w-100 rounded-0'>Log in</button>
+                    <button type='submit' className='custom-button w-100 rounded-0'>Log in</button>
                     <p></p>
-                    <Link to="/signup" className='btn custom-button w-100 rounded-0 text-decoration-none'>Create Account</Link>
+                    <Link to="/signup" className='custom-button w-100 rounded-0 text-decoration-none'>Sign Up</Link>
+                    <div className='mt-2 text-center'>
+                        <Link to="/forgot-password" className='custom-link'>Forgot Password?</Link>
+                        <Link to="/guest" className='custom-link'>Sign in as Guest</Link>
+                    </div>
                 </form>
             </div>
         </div>

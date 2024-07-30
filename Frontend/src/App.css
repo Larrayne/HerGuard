@@ -1,17 +1,43 @@
 .custom-bg {
-  background-color: #ffcccc; /* Light pink background */
+  background-color: #ffcccc; 
 }
 
 .bg-pink {
-  background-color: #ffcccc; /* Light pink form background */
+  background-color: #ffcccc; 
 }
 
 .custom-button {
-  background-color: #007FFF; /* Light blue button */
-  border: none;
-  color: white;
+  background-color: #007FFF; 
+  color: white; 
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 0.25rem; 
+  text-align: center; 
+  display: inline-block; 
+  width: 100%; 
+  text-decoration: none;
+  margin-top: 10px; 
+  cursor: pointer; 
 }
 
+
 .custom-button:hover {
-  background-color: #007FFF; /* Keep light blue button on hover */
+  background-color: #007FFF; 
 }
+
+.custom-link {
+  color: inherit; 
+  text-decoration: none;
+  display: block; 
+  margin-top: 10px; 
+}
+
+.custom-link:first-of-type {
+  margin-top: 0; 
+}
+
+
+.custom-link:hover {
+  text-decoration: underline; 
+}
+
