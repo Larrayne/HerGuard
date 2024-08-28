@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./App.css"; // Assuming you have a CSS file for styling
 
-function mainPage() {
+function MainPage() {
   return (
     <div className="app">
       <header className="header">
         <div className="greeting">
           <h1>Hello, Tracy!</h1>
           <img
-            src="https://via.placeholder.com/40" // Placeholder image for profile, replace with the actual image URL
+            src="https://via.placeholder.com/40"
             alt="Profile"
             className="profile-pic"
           />
         </div>
         <div className="location">
           <img
-            src="https://via.placeholder.com/20" // Placeholder image for Google Maps icon, replace with actual icon
+            src="https://via.placeholder.com/20"
             alt="Location Icon"
             className="location-icon"
           />
@@ -25,7 +26,7 @@ function mainPage() {
           <input type="text" placeholder="Search" />
           <button type="submit">
             <img
-              src="https://via.placeholder.com/20" // Placeholder image for search icon, replace with actual icon
+              src="https://via.placeholder.com/20"
               alt="Search"
               className="search-icon"
             />
@@ -39,41 +40,40 @@ function mainPage() {
           <button className="main-button community-alerts">
             Community Alerts
           </button>
-          <button className="main-button report-incident">
-            Report Incident
-          </button>
-          <button className="main-button share-ride">Share Ride</button>
+          <Link to="/main-page/report-incident">
+            <button className="main-button report-incident">
+              Report Incident
+            </button>
+          </Link>
+          <Link to="/main-page/share-ride">
+            <button className="main-button share-ride">Share Ride</button>
+          </Link>
         </div>
       </main>
 
       <footer className="footer">
-        <button className="footer-button home">
-          <img
-            src="https://via.placeholder.com/30" // Placeholder for home icon
-            alt="Home"
-          />
-        </button>
+        <Link to="/main-page">
+          <button className="footer-button home">
+            <img src="https://via.placeholder.com/30" alt="Home" />
+          </button>
+        </Link>
+
         <button className="footer-button call">
-          <img
-            src="https://via.placeholder.com/30" // Placeholder for call icon
-            alt="Call"
-          />
+          <img src="https://via.placeholder.com/30" alt="Call" />
         </button>
+
         <button className="footer-button settings">
-          <img
-            src="https://via.placeholder.com/30" // Placeholder for settings icon
-            alt="Settings"
-          />
+          <img src="https://via.placeholder.com/30" alt="Settings" />
         </button>
-        <button className="footer-button profile">
-          <img
-            src="https://via.placeholder.com/30" // Placeholder for profile icon
-            alt="Profile"
-          />
-        </button>
+
+        <Link to="/main-page/contacts">
+          <button className="footer-button profile">
+            <img src="https://via.placeholder.com/30" alt="Profile" />
+          </button>
+        </Link>
       </footer>
     </div>
   );
 }
 
-export default mainPage;
+export default MainPage;

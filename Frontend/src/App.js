@@ -1,11 +1,11 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import MainPage from "./MainPage"; // Renamed to start with capital letter
-import ShareRide from "./ShareRide"; // Removed hyphen from the file name to keep consistent with JS naming conventions
+import MainPage from "./MainPage";
+import ShareRide from "./ShareRide";
 import ReportIncident from "./ReportIncident";
 import Contact from "./Contacts";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -13,11 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/main-page" element={<MainPage />}>
-          <Route path="share-ride" element={<ShareRide />} />
-          <Route path="report-incident" element={<ReportIncident />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
+        <Route path="/main-page" element={<MainPage />} />
+        <Route path="/main-page/share-ride" element={<ShareRide />} />
+        <Route path="/main-page/report-incident" element={<ReportIncident />} />
+        <Route path="/main-page/contacts" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
