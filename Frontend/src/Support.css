@@ -1,0 +1,88 @@
+.help-support-bg {
+  background-color: #ffcccc;
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.custom-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.help-support-heading {
+  font-size: 24px;
+  margin: 80px 0 20px 0;
+}
+
+.help-support-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.help-support-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.contact-support-icon {
+  color: #ff9999;
+  font-size: 36px;
+}
+
+.safety-resources-icon {
+  color: #ff9999;
+  font-size: 36px;
+}
+
+.privacy-security-tips-icon {
+  color: #ff9999;
+  font-size: 36px;
+}
+
+.bookmark-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bookmark-shape {
+  position: relative;
+  background-color: #EE82EE;
+  color: #fff;
+  padding: 40px;
+  width: 400px; /* Adjust width as needed */
+  text-align: center;
+  border-radius: 5px;
+}
+
+.bookmark-shape::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #EE82EE; /* Match the background color */
+}
+
+.bookmark-text {
+  font-size: 20px;
+  margin: 0;
+}
