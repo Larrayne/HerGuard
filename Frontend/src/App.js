@@ -3,6 +3,7 @@ import Login from './Login';
 import SignUp from './SignUp';
 import FAQ from './FAQ';
 import ShareLocation from './ShareLocation';  
+import Support from './Support'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/ShareLocation' element={<ShareLocation/>}/>
         <Route path='/FAQ' element={<FAQ />} />  
+        <Route path='/FAQ' element={<Support />} />
       </Routes>
     </BrowserRouter>
   );
