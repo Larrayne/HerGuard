@@ -14,8 +14,7 @@ const HomePage = () => {
         <main className="homepage-content">
           <section>
             <p>
-              {" "}
-              place where you can feel safe with us in your pocket, let us help
+              Place where you can feel safe with us in your pocket, let us help
               you connect with your loved ones in dire situations and let us
               help you keep you safe.In this app you will find ways to
               communicate with your loved ones when in-need, if you do not feel
