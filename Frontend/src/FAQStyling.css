@@ -1,0 +1,83 @@
+.custom-bg {
+  background-color: #ffcccc; 
+  padding: 20px; 
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.bg-pink {
+  background-color: #ffcccc; 
+  color: #000; 
+  padding: 20px;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 800px; 
+  margin: 0 auto 20px; 
+}
+
+.custom-link {
+  color: #007FFF; 
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px; 
+  font-size: 1rem; 
+}
+
+.custom-link:hover {
+  text-decoration: underline;
+}
+
+.faq-bg {
+  background-color: #007FFF; 
+  color: white;
+  padding: 20px;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.faq-content {
+  background-color: #007FFF;
+  padding: 20px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.faq-section {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 5px;
+}
+
+.key-features {
+  background-color: #EE82EE; 
+  color: #000;
+  padding: 20px;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px; 
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.key-features h2 {
+  margin-bottom: 10px;
+}
+
+.key-features p {
+  margin-bottom: 10px;
+  line-height: 1.4; 
+}
