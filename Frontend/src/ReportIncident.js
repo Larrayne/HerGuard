@@ -7,6 +7,7 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 function ReportIncident() {
   const [incidentDetails, setIncidentDetails] = useState({
     userName: "",
+    location:"",
     description: "",
     media: null,
   });
@@ -29,7 +30,7 @@ function ReportIncident() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { userName, description, media } = incidentDetails;
+    const { userName, location, description, media } = incidentDetails;
     let fileUrl = '';
 
     try {
@@ -43,6 +44,7 @@ function ReportIncident() {
       // Save report to Firestore
       await addDoc(collection(db, "reports"), {
         userName: userName,
+        incidentLocation: location,
         incidentDescription: description,
         fileUrl: fileUrl,
         createdAt: new Date()
@@ -52,6 +54,7 @@ function ReportIncident() {
       // Clear the form
       setIncidentDetails({
         userName: "",
+        location:"",
         description: "",
         media: null,
       });
@@ -68,8 +71,16 @@ function ReportIncident() {
         <input
           type="text"
           name="userName"
-          placeholder="Your Name"
+          placeholder="Your Name..."
           value={incidentDetails.userName}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="location"
+          placeholder="Your Location..."
+          value={incidentDetails.location}
           onChange={handleChange}
           required
         />
