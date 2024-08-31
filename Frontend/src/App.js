@@ -4,7 +4,6 @@ import SignUp from './SignUp';
 import MainPage from './MainPage';
 import Contacts from './Contacts';
 import ReportIncidents from './ReportIncident';
-import ShareRide from './ShareRide';
 import FAQ from './FAQ';
 import ShareLocation from './ShareLocation';  
 import Support from './Support'
