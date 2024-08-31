@@ -35,10 +35,13 @@ const CommunityReport = () => {
                         reports.map((report, index) => (
                             <div className="report" key={index}>
                                 <div className="user-info">
-                                    <span className="user-name">{report.userName || 'Anonymous User'}</span>
+                                    <span className="user-name">{report.userName}</span>
                                 </div>
-                                <p className="report-description">{report.incidentDescription}</p>
-                                {report.fileUrl && (
+                                <div className="user-location">
+                                    <span className="location">{"Location: " + report.incidentLocation}</span>
+                                </div>
+                                <p className="report-description">{"Description: " + report.incidentDescription}</p>
+                                {"Supporting Evidence: " + report.fileUrl && (
                                     <img src={report.fileUrl} alt="Media Evidence" style={{ width: '100%', height: 'auto' }} />
                                 )}
                                 <hr />
