@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './FAQStyling.css'; // Import the FAQ-specific CSS
+import './FAQStyling.css'; 
 
 function FAQ() {
   return (
