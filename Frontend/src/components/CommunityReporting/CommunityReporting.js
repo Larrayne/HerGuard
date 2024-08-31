@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import './CommunityReporting.css'; // Ensure correct path and styling
+import { Link } from 'react-router-dom'; 
+import './CommunityReporting.css'; 
 
 const CommunityReport = () => {
     // Form submit handler
