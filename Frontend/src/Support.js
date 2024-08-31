@@ -27,7 +27,7 @@ function Support() {
           <i className="fas fa-shield-alt safety-resources-icon"></i>
           <span>Safety Resources</span>
         </div>
-        <div className='help-support-button'>
+        <div className="help-support-button">
           <i className="fas fa-lock privacy-security-tips-icon"></i>
           <span>Privacy, Security and Tips</span>
         </div>
