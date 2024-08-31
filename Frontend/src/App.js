@@ -4,7 +4,6 @@ import SignUp from './SignUp';
 import MainPage from './MainPage';
 import Contacts from './Contacts';
 import ReportIncidents from './ReportIncident';
-import ShareRide from './ShareRide';
 import FAQ from './FAQ';
 import ShareLocation from './ShareLocation';  
 import Home from './pages/Home';
@@ -23,7 +22,7 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='main-page' element={<MainPage />} />
         <Route path='main-page/report-incident' element={<ReportIncidents />} />
-        <Route path='main-page/share-ride' element={<ShareRide />} />
+        <Route path='main-page/share-ride' element={<ShareLocation />} />
         <Route path='main-page/contacts' element={<Contacts />} />
         <Route path='/ShareLocation' element={<ShareLocation/>}/>
         <Route path='/FAQ' element={<FAQ />} />  

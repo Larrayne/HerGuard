@@ -52,19 +52,23 @@ function MainPage() {
       </main>
 
       <footer className="footer">
-        <Link to="/main-page">
+        <Link to="/main-page/support">
           <button className="footer-button home">
-            <img src="https://via.placeholder.com/30" alt="Home" />
+            <img src="https://via.placeholder.com/30" alt="Support" />
           </button>
         </Link>
 
+      <Link to="/main-page/contacts">
         <button className="footer-button call">
           <img src="https://via.placeholder.com/30" alt="Call" />
         </button>
+        </Link>
 
+        <Link to="/main-page/FAQ">
         <button className="footer-button settings">
           <img src="https://via.placeholder.com/30" alt="Settings" />
         </button>
+        </Link>
 
         <Link to="/main-page/contacts">
           <button className="footer-button profile">
