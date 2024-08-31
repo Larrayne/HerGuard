@@ -22,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />{" "}
         {/* Temporarily set a path you want to test as the default route. I have put Login for simplicity purposes but it can be changed*/}
+        <Route path='/homepage' element={<Home/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="main-page" element={<MainPage />} />
@@ -30,6 +31,8 @@ function App() {
         <Route path="main-page/contacts" element={<Contacts />} />
         <Route path="/ShareLocation" element={<ShareLocation />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path='/DangerAlerts' element={<DangerAlerts/>} />
+        <Route path='/CommunityReporting' element={<CommunityReporting/>} />
         <Route path="main-page/profile" element={<Profile />} />
         <Route path="main-page/settings" element={<Settings />} />
         <Route path="/FAQ" element={<FAQ />} />
