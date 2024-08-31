@@ -41,8 +41,10 @@ const CommunityReport = () => {
                                     <span className="location">{"Location: " + report.incidentLocation}</span>
                                 </div>
                                 <p className="report-description">{"Description: " + report.incidentDescription}</p>
-                                {"Supporting Evidence: " + report.fileUrl && (
-                                    <img src={report.fileUrl} alt="Media Evidence" style={{ width: '100%', height: 'auto' }} />
+                                {report.fileUrl && (
+                                    <>
+                                        <p><a href={report.fileUrl} target="_blank" rel="noopener noreferrer">View Evidence</a></p>
+                                    </>
                                 )}
                                 <hr />
                             </div>

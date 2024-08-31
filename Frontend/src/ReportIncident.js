@@ -51,7 +51,6 @@ function ReportIncident() {
       });
 
       alert('Report submitted successfully!');
-      // Clear the form
       setIncidentDetails({
         userName: "",
         location:"",
