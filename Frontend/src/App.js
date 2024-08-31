@@ -1,22 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './SignUp';
 import FAQ from './FAQ';
 import ShareLocation from './ShareLocation';  
-import Support from './Support'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Support from './Support';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Login />} />  {/* Temporarily set a path you want to test as the default route. I have put Login for simplicity purposes but it can be changed*/}
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/ShareLocation' element={<ShareLocation/>}/>
-        <Route path='/FAQ' element={<FAQ />} />  
-        <Route path='/FAQ' element={<Support />} />
+        <Route path='/' element={<Support />} />  {/* Default route */}
+        <Route path='/Login' element={<Login />} />
+        <Route path='/SignUp' element={<SignUp />} />
+        <Route path='/ShareLocation' element={<ShareLocation />} />
+        <Route path='/FAQ' element={<FAQ />} />
       </Routes>
     </BrowserRouter>
   );

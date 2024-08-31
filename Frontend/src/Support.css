@@ -86,3 +86,37 @@
   font-size: 20px;
   margin: 0;
 }
+
+.articles-container {
+  margin-top: 40px; /* Increased top margin */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #ff9999;
+  border-radius: 10px;
+}
+
+.article-tile {
+  background-color: #FFC0CB;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.article-text {
+  font-size: 18px;
+  margin: 0;
+}
+
+.article-text a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.article-text a:hover {
+  text-decoration: underline;
+  color: #ff9999; /* Matches the icon color */
+}
