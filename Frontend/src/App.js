@@ -3,6 +3,9 @@ import Login from './Login';
 import SignUp from './SignUp';
 import FAQ from './FAQ';
 import ShareLocation from './ShareLocation';  
+import Home from './pages/Home';
+import DangerAlerts from './components/DangerAlerts/DangerAlerts';
+import CommunityReporting from './components/CommunityReporting/CommunityReporting';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
@@ -15,6 +18,9 @@ function App() {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/ShareLocation' element={<ShareLocation/>}/>
         <Route path='/FAQ' element={<FAQ />} />  
+        <Route path='/homepage' element={<Home/>} />
+        <Route path='/DangerAlerts' element={<DangerAlerts/>} />
+        <Route path='/CommunityReporting' element={<CommunityReporting/>} />
       </Routes>
     </BrowserRouter>
   );
