@@ -27,8 +27,8 @@ function App() {
         <Route path="main-page/contacts" element={<Contacts />} />
         <Route path="/ShareLocation" element={<ShareLocation />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="main-page/profile" element={<Profile />} />
+        <Route path="main-page/settings" element={<Settings />} />
         <Route path="main-page/FAQ" element={<FAQ />} />
         <Route path="main-page/support" element={<Support />} />
       </Routes>
