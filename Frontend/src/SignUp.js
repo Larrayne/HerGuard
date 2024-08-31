@@ -68,7 +68,7 @@ function SignUp() {
                     </div>
                     <button type='submit' className='custom-button w-100 rounded-0'>Sign Up</button>
                     <p></p>
-                    <Link to="/" className='custom-button w-100 rounded-0 text-decoration-none'>Login</Link>
+                    <Link to="/main-page" className='custom-button w-100 rounded-0 text-decoration-none'>Login</Link>
                 </form>
             </div>
         </div>

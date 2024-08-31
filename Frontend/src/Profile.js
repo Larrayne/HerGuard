@@ -18,12 +18,8 @@ function Profile() {
         </button>
       </div>
       <div className="profile-image-container">
-        <img
-          src="path_to_placeholder_image"
-          alt="Profile"
-          className="profile-image"
-        />
-        <h2>John Doe</h2>
+      <i className="fa-regular fa-user" ></i>
+      <h2>John Doe</h2>
       </div>
       <div className="profile-info">
         <div>Username</div>
