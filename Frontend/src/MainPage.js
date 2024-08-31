@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css"; // Assuming you have a CSS file for styling
+import "./MainPage.css"; // Assuming you have a CSS file for styling
 
 function MainPage() {
   return (
@@ -71,6 +71,13 @@ function MainPage() {
           <i className="fa-regular fa-circle-question" ></i>
           </button>
         </Link>
+
+        <Link to="/main-page">
+          <button className="footer-button panic-Button">
+          <i className="fa-solid fa-triangle-exclamation" ></i>
+          </button>
+        </Link>
+
       </footer>
     </div>
   );

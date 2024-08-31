@@ -17,7 +17,7 @@
 }
 
 .incident-reports, .report-incident {
-    background-color: #ffe4e1;
+    /* background-color: #ffe4e1; */
     padding: 20px;
     border-radius: 10px;
 }

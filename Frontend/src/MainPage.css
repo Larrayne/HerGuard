@@ -1,0 +1,146 @@
+/* General body and app container styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffcccc;
+  }
+  
+  /* Header styling */
+  .header {
+    padding: 20px;
+    background-color: #ffcccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Greeting styling */
+  .greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .greeting h1 {
+    margin: 0;
+  }
+  
+  .greeting a {
+    color: #007FFF;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  /* Location styling */
+  .location {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .location-icon {
+    margin-right: 10px;
+  }
+  
+  .location p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 2px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background-color: #007FFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    color: white;
+  }
+  
+  .search-bar button i {
+    font-size: 16px;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  /* Button styling */
+  .main-button {
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .main-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer styling */
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007FFF;
+  }
+  
+  .footer-button i {
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .footer-button:hover i {
+    color: #0056b3;
+  }
+  

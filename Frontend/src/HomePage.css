@@ -1,14 +1,14 @@
 .homepage{
     text-align: center;
     padding: 20px;
-    background-color: pink;
+    background-color: #ff9999;
 }
 
-/* .homepage-header{
-    background-color: #7595d4;
+.homepage-header{
+    background-color: pink;
     padding: 20px;
-    color: white;
-} */
+    color: black;
+}
 
 .homepage-logo {
     height: 300px;
@@ -36,7 +36,7 @@
 .homepage-footer{
     margin-top: 20px;
     padding: 10px;
-    background-color: #f03da5;
+    background-color: pink;
 }
 
 
