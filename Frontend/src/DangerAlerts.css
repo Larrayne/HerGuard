@@ -1,0 +1,53 @@
+.danger-alerts {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffe4e1;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.alert-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.alert-button {
+    background-color: #ff4d4d; /* Red/Orange Button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-content {
+    text-align: center;
+}
+
+.alert-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.alert-map {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust as necessary */
+}
+
+.alert-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff4d4d;
+}
