@@ -7,7 +7,7 @@ function MainPage() {
     <div className="app">
       <header className="header">
         <div className="greeting">
-          <h1>Hello, Tracy!</h1>
+          <h1>Hello, User!</h1>
           <Link to="/main-page/profile">
           <i className="fa-regular fa-user" ></i>
           </Link>
@@ -41,7 +41,7 @@ function MainPage() {
             </button>
           </Link>
 
-          <Link to="/main-page/share-ride">
+          <Link to="/main-page/share-location">
             <button className="main-button share-ride">Share Ride</button>
           </Link>
         </div>
