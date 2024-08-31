@@ -12,6 +12,7 @@ const CommunityReport = () => {
 
     return (
         <div className="community-report">
+        <Link to="/main-page" className='custom-link'>Back</Link>
             <header className="report-header">
                 <h1>Community Reporting</h1>
             </header>
@@ -36,22 +37,15 @@ const CommunityReport = () => {
                     </div>
                 </section>
 
-                <section className="report-incident">
-                    <h2>Report an Incident</h2>
-                    <form onSubmit={handleSubmit}>
-                        <textarea placeholder="Describe the incident..." className="incident-description"></textarea>
-                        <input type="file" className="upload-image" />
-                        <button type="submit" className="submit-report">Post</button>
-                    </form>
-                </section>
+                
             </main>
 
             <footer className="report-footer">
                 <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/reports" className="active">Reports</Link>
-                    <Link to="/search">Search</Link>
-                    <Link to="/profile">Profile</Link>
+                    <Link to="/main-page">Home</Link>
+                    <Link to="/main-page/support">Support</Link>
+                    <Link to="/main-page/FAQ">FAQ</Link>
+                    <Link to="/main-page/profile">Profile</Link>
                 </nav>
             </footer>
         </div>
