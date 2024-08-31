@@ -13,11 +13,7 @@ function Settings() {
         <FaCog className="icon" onClick={() => alert("Settings")} />
       </div>
       <div className="profile-image-container">
-        <img
-          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Ffeeling-safe&psig=AOvVaw0eeVaZAi9JYPvOBxltgxJT&ust=1724876093236000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLC1mqn-lYgDFQAAAAAdAAAAABAE"
-          alt="Profile"
-          className="profile-image"
-        />
+      <i className="fa-regular fa-user" ></i>
       </div>
       <div className="settings-options">
         <button className="settings-button">My Profile</button>

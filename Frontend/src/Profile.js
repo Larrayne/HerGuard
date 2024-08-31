@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Profile.css"; // Create this CSS file for styling
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 
 function Profile() {
@@ -13,9 +13,7 @@ function Profile() {
   return (
     <div className="profile-container">
       <div className="profile-header">
-        <button className="back-button" onClick={() => navigate(-1)}>
-          Back
-        </button>
+      <Link to="/main-page"><button>Back</button></Link>
       </div>
       <div className="profile-image-container">
       <i className="fa-regular fa-user" ></i>
