@@ -23,12 +23,12 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="main-page" element={<MainPage />} />
         <Route path="main-page/report-incident" element={<ReportIncidents />} />
-        <Route path="main-page/share-ride" element={<ShareRide />} />
+        <Route path="main-page/share-ride" element={<ShareLocation />} />
         <Route path="main-page/contacts" element={<Contacts />} />
         <Route path="/ShareLocation" element={<ShareLocation />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="main-page/profile" element={<Profile />} />
+        <Route path="main-page/settings" element={<Settings />} />
         <Route path="/FAQ" element={<FAQ />} />
         <Route path="/FAQ" element={<Support />} />
       </Routes>
