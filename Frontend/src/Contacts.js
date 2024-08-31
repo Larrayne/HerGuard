@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'; 
 
 function Contact() {
   const [location, setLocation] = useState("Unknown Location");
@@ -30,7 +31,9 @@ function Contact() {
           </li>
         ))}
       </ul>
+      <Link to="/main-page"><button>Back</button></Link>
     </div>
+    
   );
 }
 

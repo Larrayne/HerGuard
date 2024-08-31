@@ -1,5 +1,6 @@
 import React from 'react';
 import './DangerAlerts.css'; 
+import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'; // Replace with the path to your map image or integrate a map component
 import 'leaflet/dist/leaflet.css';
 
@@ -8,6 +9,7 @@ import 'leaflet/dist/leaflet.css';
 const DangerAlerts = () => {
     return (
         <div className="danger-alerts">
+            <Link to="/main-page" className='custom-link'>Back</Link>
             <header className="alert-header">
                 <button className="alert-button">Danger Alerts</button>
             </header>

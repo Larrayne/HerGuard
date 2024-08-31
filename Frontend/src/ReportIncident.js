@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function ReportIncident() {
   const [incidentDetails, setIncidentDetails] = useState({
@@ -29,36 +31,16 @@ function ReportIncident() {
   };
 
   return (
-    <div
-      className="report-incident-page"
-      style={{ backgroundColor: "#fbe8e6", padding: "20px" }}
-    >
-      <h2>Report Incident</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Description:</label>
-          <textarea
-            name="description"
-            value={incidentDetails.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Exact Location:</label>
-          <input
-            type="text"
-            name="location"
-            value={incidentDetails.location}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Upload Media Evidence:</label>
-          <input type="file" onChange={handleFileChange} />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+<section className="report-incident">
+
+                    <h2>Report an Incident</h2>
+                    <form onSubmit={handleSubmit}>
+                        <textarea placeholder="Describe the incident..." className="incident-description"></textarea>
+                        <input type="file" className="upload-image" />
+                        <button type="submit" className="submit-report">Post</button>
+                        <Link to="/main-page"><button>Back</button></Link>
+                    </form>
+                </section>
   );
 }
 
