@@ -10,6 +10,9 @@ import Support from './Support'
 import ForgotPassword from './ForgotPassword';
 import Profile from './Profile';
 import Settings from './Settings';
+import Home from './pages/Home';
+import DangerAlerts from './components/DangerAlerts/DangerAlerts';
+import CommunityReporting from './components/CommunityReporting/CommunityReporting';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
