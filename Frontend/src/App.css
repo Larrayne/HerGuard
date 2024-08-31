@@ -7,7 +7,7 @@
 }
 
 .custom-button {
-  background-color: #007FFF;
+  background-color: #007fff;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -37,6 +37,26 @@
 
 .custom-link:hover {
   text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fbe8e6; /* Light pink background color */
+}
+
+.header {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .greeting {
