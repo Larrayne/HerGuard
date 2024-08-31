@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import SignUp from './SignUp';
 import MainPage from './MainPage';
@@ -13,8 +14,6 @@ import Settings from './Settings';
 import Home from './Home';
 import DangerAlerts from './DangerAlerts';
 import CommunityReporting from './CommunityReporting';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import FirestoreExample from './firebase_test';
 
 
 function App() {
@@ -22,9 +21,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />{" "}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/firebase" element={<FirestoreExample/>} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Signup" element={<SignUp />} />
         <Route path="main-page" element={<MainPage />} />
         <Route path="main-page/report-incident" element={<ReportIncidents />} />
         <Route path="main-page/share-location" element={<ShareLocation />} />
