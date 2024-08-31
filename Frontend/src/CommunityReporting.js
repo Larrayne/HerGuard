@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import './CommunityReporting.css'; 
+import { db } from './firebase.js'; 
+import { collection, getDocs } from "firebase/firestore";
 
 const CommunityReport = () => {
-    // Form submit handler
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add logic to handle form submission, e.g., sending data to a backend API
-        console.log('Form submitted');
-    };
+    const [reports, setReports] = useState([]);  
+
+    useEffect(() => {
+        const loadReports = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, "reports"));
+                const reportsList = querySnapshot.docs.map(doc => doc.data());
+                setReports(reportsList);  
+            } catch (error) {
+                console.error("Error fetching documents: ", error);
+            }
+        };
+
+        loadReports();
+    }, []);  
 
     return (
         <div className="community-report">
-        <Link to="/main-page" className='custom-link'>Back</Link>
+            <Link to="/main-page" className='custom-link'>Back</Link>
             <header className="report-header">
                 <h1>Community Reporting</h1>
             </header>
@@ -20,24 +31,23 @@ const CommunityReport = () => {
             <main className="report-content">
                 <section className="incident-reports">
                     <h2>Recent Reports</h2>
-                    <div className="report">
-                        {/* Add user icon if needed and path is correct */}
-                        {/* <div className="user-info">
-                            <img src={userIcon} alt="User" className="user-icon" />
-                            <span className="user-name">Anonymous User</span>
-                        </div> */}
-                        <p className="report-description">Attempted hijacking at Eastgate Mall in the ground floor parking.</p>
-                    </div>
-                    <div className="report">
-                        <div className="user-info">
-                            {/* <img src={userIcon} alt="User" className="user-icon" /> */}
-                            <span className="user-name">Siphokazi</span>
-                        </div>
-                        <p className="report-description">Be on the lookout when driving on Main Street, there has been an increase in carjackings.</p>
-                    </div>
+                    {reports.length > 0 ? (
+                        reports.map((report, index) => (
+                            <div className="report" key={index}>
+                                <div className="user-info">
+                                    <span className="user-name">{report.userName || 'Anonymous User'}</span>
+                                </div>
+                                <p className="report-description">{report.incidentDescription}</p>
+                                {report.fileUrl && (
+                                    <img src={report.fileUrl} alt="Media Evidence" style={{ width: '100%', height: 'auto' }} />
+                                )}
+                                <hr />
+                            </div>
+                        ))
+                    ) : (
+                        <p>No reports found.</p>
+                    )}
                 </section>
-
-                
             </main>
 
             <footer className="report-footer">
