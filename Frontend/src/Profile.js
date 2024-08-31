@@ -18,8 +18,8 @@ function Profile() {
         </button>
       </div>
       <div className="profile-image-container">
-        <i className="fa-regular fa-user"></i>
-        <h2>John Doe</h2>
+      <i className="fa-regular fa-user" ></i>
+      <h2>John Doe</h2>
       </div>
       <div className="profile-info">
         <div>Username</div>
