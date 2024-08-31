@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Profile.css"; // Create this CSS file for styling
 import { useNavigate } from "react-router-dom";
 
+
+
 function Profile() {
   const navigate = useNavigate();
   const [privateProfile, setPrivateProfile] = useState(true);
