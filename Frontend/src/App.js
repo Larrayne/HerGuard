@@ -6,6 +6,7 @@ import MainPage from "./MainPage";
 import ShareRide from "./ShareRide";
 import ReportIncident from "./ReportIncident";
 import Contact from "./Contacts";
+import FirestoreExample from "./firebase_test";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/firebase" element={<FirestoreExample />} />
         <Route path="/main-page" element={<MainPage />} />
         <Route path="/main-page/share-ride" element={<ShareRide />} />
         <Route path="/main-page/report-incident" element={<ReportIncident />} />
