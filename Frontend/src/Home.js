@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import logo from '../HerGuard.png'
+import logo from './HerGuard.png'
 
 const HomePage = () => {
     return (

@@ -38,15 +38,21 @@ function MainPage() {
 
       <main className="main-content">
         <div className="button-grid">
+          <Link to="/main-page/DangerAlerts">
           <button className="main-button danger-alert">Danger Alert</button>
+          </Link>
+          <Link to="/main-page/CommunityReporting">
           <button className="main-button community-alerts">
             Community Alerts
           </button>
+          </Link>
+
           <Link to="/main-page/report-incident">
             <button className="main-button report-incident">
               Report Incident
             </button>
           </Link>
+
           <Link to="/main-page/share-ride">
             <button className="main-button share-ride">Share Ride</button>
           </Link>
