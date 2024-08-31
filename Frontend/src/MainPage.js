@@ -8,11 +8,13 @@ function MainPage() {
       <header className="header">
         <div className="greeting">
           <h1>Hello, Tracy!</h1>
+          <Link to="/main-page/profile">
           <img
             src="https://via.placeholder.com/40"
             alt="Profile"
             className="profile-pic"
           />
+          </Link>
         </div>
         <div className="location">
           <img
@@ -66,7 +68,7 @@ function MainPage() {
 
         <Link to="/main-page/FAQ">
         <button className="footer-button settings">
-          <img src="https://via.placeholder.com/30" alt="Settings" />
+          <i className="fa-solid fa-gear" ></i>
         </button>
         </Link>
 
