@@ -55,7 +55,7 @@ const DangerAlerts = () => {
   return (
     <div className="danger-alerts">
       <Link to="/main-page" className="custom-link">
-        Back
+        <button>Back</button>
       </Link>
       <header className="alert-header">
         <button className="alert-button">Danger Alerts</button>

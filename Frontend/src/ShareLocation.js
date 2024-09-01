@@ -55,7 +55,7 @@ function ShareLocation() {
     <div className="d-flex justify-content-center align-items-center custom-bg vh-100">
       <div className="bg-pink p-4 rounded" style={{ width: "320px" }}>
         <Link to="/main-page" className="custom-link">
-          Back
+        <button>Back</button>
         </Link>
         <div className="tile-button">Location Details</div>
         <p>Please enter the relevant information</p>

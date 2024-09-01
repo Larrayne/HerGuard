@@ -23,7 +23,7 @@ function Profile() {
         <div>Username  : Chrissy</div>
         <div>Website  : <a href=" https://www.instagram.com">Instagram</a> </div>
         <div>Bio</div>
-        <p>Just your normal guy from the neighbourhood</p>
+        <p>Just your normal lady from the neighbourhood</p>
         <div className="profile-setting">
           <span>Private profile</span>
           <input

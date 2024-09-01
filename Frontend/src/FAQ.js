@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './FAQStyling.css'; 
 
 function FAQ() {
@@ -7,9 +7,10 @@ function FAQ() {
   return (
     <div className="custom-bg">
       <div className="bg-pink">
-        <button className="back-button" onClick={() => navigate(-1)}>
-          Back
-        </button>
+        <Link to="/main-page">
+      <button>Back</button>
+      </Link>
+
         <div className="faq-bg">Frequently Asked Questions</div>
         <div className="faq-content">
           <div className="faq-section">

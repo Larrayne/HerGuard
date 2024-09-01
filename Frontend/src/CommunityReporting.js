@@ -23,7 +23,9 @@ const CommunityReport = () => {
 
     return (
         <div className="community-report">
-            <Link to="/main-page" className='custom-link'>Back</Link>
+            <Link to="/main-page" className='custom-link'>
+            <button>Back</button>
+            </Link>
             <header className="report-header">
                 <h1>Community Reporting</h1>
             </header>
