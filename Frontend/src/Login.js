@@ -28,7 +28,7 @@ function Login() {
                 await signInWithEmailAndPassword(auth, values.email, values.password);
                 
                 // Redirect to home page or dashboard
-                navigate('/'); // Adjust the path according to your routing setup
+                navigate('/main-page'); // Adjust the path according to your routing setup
             } catch (error) {
                 console.error('Error logging in:', error.message);
                 setErrors({ ...errors, firebase: error.message });

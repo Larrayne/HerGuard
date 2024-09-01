@@ -14,7 +14,6 @@ import Settings from './Settings';
 import Home from './Home';
 import DangerAlerts from './DangerAlerts';
 import CommunityReporting from './CommunityReporting';
-import PanicMode from './PanicMode';
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
         <Route path="main-page/settings" element={<Settings />} />
         <Route path="main-page/FAQ" element={<FAQ />} />
         <Route path="main-page/support" element={<Support />} />
-        <Route path="main-page/panic-mode" element={<PanicMode />} />
 
       </Routes>
     </BrowserRouter>

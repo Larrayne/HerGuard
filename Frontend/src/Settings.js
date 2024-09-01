@@ -22,13 +22,7 @@ function Settings() {
         <button className="settings-button">Theme</button>
         <button className="settings-button">Help</button>
       </div>
-      <div className="faq-container">
-        <img
-          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-png%2Ffaq-icon&psig=AOvVaw1JGcwU8Lm8GxfWX_aKqRWB&ust=1724876164318000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKD9_8r-lYgDFQAAAAAdAAAAABAE"
-          alt="FAQ"
-          className="faq-image"
-        />
-      </div>
+    
     </div>
   );
 }

@@ -17,10 +17,10 @@ function Profile() {
       </div>
       <div className="profile-image-container">
       <i className="fa-regular fa-user" ></i>
-      <h2>John Doe</h2>
+      <h2>Chrissy</h2>
       </div>
       <div className="profile-info">
-        <div>Username  : Johnny</div>
+        <div>Username  : Chrissy</div>
         <div>Website  : <a href=" https://www.instagram.com">Instagram</a> </div>
         <div>Bio</div>
         <p>Just your normal guy from the neighbourhood</p>

@@ -16,7 +16,7 @@ function Support() {
 
   return (
     <div className='help-support-bg'>
-      <Link to="/" className='custom-link'>Back</Link>
+      <Link to="/main-page" className='custom-link'>Back</Link>
       <h1 className='help-support-heading'>Hey Girl Pal, How can we help you?</h1>
       <div className='help-support-buttons'>
         <div className='help-support-button' onClick={handleContactSupportClick}>

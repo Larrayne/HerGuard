@@ -35,6 +35,9 @@ const HomePage = () => {
             <Link to="/signup">
               <button>Sign Up</button>
             </Link>
+            <Link to="/Login">
+              <button>Log In</button>
+            </Link>
           </section>
         </main>
 

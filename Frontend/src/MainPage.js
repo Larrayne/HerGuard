@@ -193,19 +193,13 @@ function MainPage() {
           </button>
         </Link>
 
-        <Link to="/main-page">
-          <button className="footer-button Panic-Button">
+          <button className="footer-button Panic-Button"
+          onClick={handlePanicMode} // Call handlePanicMode on click
+          >
+            
             <i className="fa-solid fa-triangle-exclamation"></i>
           </button>
-        </Link>
-        {/* Button to trigger Panic Mode and navigate */}
-        <button
-          className="footer-button profile"
-          onClick={handlePanicMode} // Call handlePanicMode on click
-          style={{ padding: "10px 20px", margin: "10px 0" }}
-        >
-          <i className="fa-regular fa-circle-question"></i>
-        </button>
+    
       </footer>
     </div>
   );
