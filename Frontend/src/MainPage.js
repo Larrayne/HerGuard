@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./MainPage.css"; // Assuming you have a CSS file for styling
 import "./App.css";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "./firebase.js";
@@ -139,9 +140,16 @@ function MainPage() {
         </Link>
         <Link to="/main-page/FAQ">
           <button className="footer-button profile">
-            <i className="fa-regular fa-circle-question"></i>
+          <i className="fa-regular fa-circle-question" ></i>
           </button>
         </Link>
+
+        <Link to="/main-page">
+          <button className="footer-button panic-Button">
+          <i className="fa-solid fa-triangle-exclamation" ></i>
+          </button>
+        </Link>
+
       </footer>
     </div>
   );
