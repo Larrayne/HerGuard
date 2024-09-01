@@ -145,7 +145,7 @@ function Contact() {
                 <span>{"Number: " + contact.number+ "     "}</span>
               </li>
             ))}
-          </ul>
+          </ul> 
         </div>
       ) : (
         <button style={buttonStyle} onClick={() => setShowContacts(true)}>
