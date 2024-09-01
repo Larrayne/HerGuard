@@ -148,3 +148,37 @@ body {
   width: 30px;
   height: 30px;
 }
+
+.search-results {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.search-results h3 {
+  margin-bottom: 10px;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-results li:last-child {
+  border-bottom: none;
+}
+
+.search-results a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.search-results a:hover {
+  text-decoration: underline;
+}
