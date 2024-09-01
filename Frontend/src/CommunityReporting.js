@@ -38,9 +38,10 @@ const CommunityReport = () => {
                                     <span className="user-name">{report.userName}</span>
                                 </div>
                                 <div className="user-location">
-                                    <span className="location">{"Location: " + report.incidentLocation}</span>
+                                    {/* Ensure incidentLocation is treated as a string */}
+                                    <span className="location">Location: {String(report.incidentLocation)}</span>
                                 </div>
-                                <p className="report-description">{"Description: " + report.incidentDescription}</p>
+                                <p className="report-description">Description: {report.incidentDescription}</p>
                                 {report.fileUrl && (
                                     <>
                                         <p><a href={report.fileUrl} target="_blank" rel="noopener noreferrer">View Evidence</a></p>
