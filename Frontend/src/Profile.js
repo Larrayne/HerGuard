@@ -20,9 +20,10 @@ function Profile() {
       <h2>John Doe</h2>
       </div>
       <div className="profile-info">
-        <div>Username</div>
-        <div>Website</div>
+        <div>Username  : Johnny</div>
+        <div>Website  : <a href=" https://www.instagram.com">Instagram</a> </div>
         <div>Bio</div>
+        <p>Just your normal guy from the neighbourhood</p>
         <div className="profile-setting">
           <span>Private profile</span>
           <input
@@ -48,12 +49,7 @@ function Profile() {
           />
         </div>
       </div>
-      <div className="profile-footer">
-        <button className="footer-button">Home</button>
-        <button className="footer-button">Reports</button>
-        <button className="footer-button">Search</button>
-        <button className="footer-button active">Profile</button>
-      </div>
+    
     </div>
   );
 }
