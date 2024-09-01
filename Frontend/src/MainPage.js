@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "./MainPage.css";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "./firebase.js";
 
@@ -140,6 +140,12 @@ function MainPage() {
         <Link to="/main-page/FAQ">
           <button className="footer-button profile">
             <i className="fa-regular fa-circle-question"></i>
+          </button>
+        </Link>
+
+        <Link to="/main-page">
+          <button className="footer-button Panic-Button">
+            <i className="fa-solid fa-triangle-exclamation"></i>
           </button>
         </Link>
       </footer>
