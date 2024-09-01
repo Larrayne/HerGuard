@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./App.css";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "./firebase.js";
+import emailjs from "emailjs-com";
 
 function MainPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [searchPerformed, setSearchPerformed] = useState(false); // Track if a search has been performed
+  const [message, setMessage] = useState(""); // For showing panic mode message
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -33,6 +37,46 @@ function MainPage() {
     }
   };
 
+  // Function to handle Panic Mode button click
+  const handlePanicMode = async () => {
+    const currentLocation = "216 14th Ave MTN HQ, Roodeport";
+    const alertMessage = `This is an emergency alert from ${currentLocation}. Please take necessary actions. Koketso is in need of help, her safety has been compromised`;
+
+    try {
+      const querySnapshot = await getDocs(collection(db, "emergency-contacts"));
+      const contactsList = querySnapshot.docs.map((doc) => doc.data().email);
+
+      if (contactsList.length === 0) {
+        alert("No contacts found to send alerts to.");
+        return;
+      }
+
+      for (const email of contactsList) {
+        const templateParams = {
+          to_email: email,
+          message: alertMessage
+        };
+
+        console.log("Sending email to:", email);
+
+        const response = await emailjs.send(
+          "service_hkjtwgk",
+          "template_d3ejlm5",
+          templateParams,
+          "bwhEUCHf8cDZPH-VU"
+        );
+
+        console.log("Email sent successfully:", response);
+      }
+
+      // Display browser alert popup
+      window.alert(`Alerts sent to: ${contactsList.join(", ")}`);
+    } catch (error) {
+      console.error("Error sending alerts:", error);
+      window.alert(`Failed to send alerts. Location: ${currentLocation}`);
+    }
+  };
+
   return (
     <div className="app">
       <header className="header">
@@ -44,7 +88,7 @@ function MainPage() {
         </div>
         <div className="location">
           <i className="fa-solid fa-location-dot"></i>
-          <p>Johannesburg, Sandton</p>
+          <p>216 14th Ave MTN HQ, Roodeport</p>
         </div>
         <div className="search-bar">
           <input
@@ -79,7 +123,6 @@ function MainPage() {
           </Link>
         </div>
 
-        {/* Display search results if any */}
         {searchPerformed && searchResults.length > 0 && (
           <div className="search-results">
             <h3>Search Results:</h3>
@@ -119,6 +162,13 @@ function MainPage() {
             <h3>No search results found for "{searchTerm}"</h3>
           </div>
         )}
+
+        {/* Display panic mode message if present */}
+        {message && (
+          <div className="panic-message">
+            <p>{message}</p>
+          </div>
+        )}
       </main>
 
       <footer className="footer">
@@ -142,11 +192,14 @@ function MainPage() {
             <i className="fa-regular fa-circle-question"></i>
           </button>
         </Link>
-        <Link to="/main-page/panic-mode">
-          <button className="footer-button profile">
-            <i className="fa-regular fa-circle-question"></i>
-          </button>
-        </Link>
+        {/* Button to trigger Panic Mode and navigate */}
+        <button
+          className="footer-button profile"
+          onClick={handlePanicMode} // Call handlePanicMode on click
+          style={{ padding: "10px 20px", margin: "10px 0" }}
+        >
+          <i className="fa-regular fa-circle-question"></i>
+        </button>
       </footer>
     </div>
   );

@@ -1,34 +1,35 @@
-// functions/index.js
-const functions = require("firebase-functions");
-const nodemailer = require("nodemailer");
+const functions = require('firebase-functions');
+const sgMail = require('@sendgrid/mail');
+const cors = require('cors')({ origin: true });
 
-// Configure the email transporter using SMTP
-const transporter = nodemailer.createTransport({
-  service: 'gmail', // Use your email provider, e.g., 'yahoo', 'hotmail', etc.
-  auth: {
-    user: functions.config().smtp.email, // Your email address
-    pass: functions.config().smtp.password // Your email password or app-specific password
-  }
-});
+sgMail.setApiKey(functions.config().sendgrid.key); // Ensure your SendGrid API key is set
 
-// Function to send emergency alert emails
-exports.sendAlertEmails = functions.https.onRequest(async (req, res) => {
-  const contacts = req.body.contacts; // Assuming contacts is an array of email addresses
+exports.sendAlertEmails = functions.https.onRequest((req, res) => {
+  cors(req, res, async () => {
+    // Check if the request method is POST
+    if (req.method !== 'POST') {
+      return res.status(405).send('Method Not Allowed');
+    }
 
-  // Set up email data
-  const mailOptions = {
-    from: functions.config().smtp.email,
-    to: contacts.join(", "), // Join multiple email addresses with a comma
-    subject: "Emergency Alert",
-    text: "This is an emergency alert! Please take immediate action."
-  };
+    const { contacts } = req.body;
 
-  try {
-    // Send email using the configured transporter
-    await transporter.sendMail(mailOptions);
-    res.status(200).send("Emails sent successfully!");
-  } catch (error) {
-    console.error("Error sending emails:", error);
-    res.status(500).send("Failed to send emails.");
-  }
+    if (!contacts || contacts.length === 0) {
+      return res.status(400).send('No contacts provided');
+    }
+
+    const msg = {
+      to: contacts,
+      from: 'christinahkmothapo@gmail.com',
+      subject: 'Emergency Alert',
+      text: 'This is an emergency alert. Please take necessary actions.',
+    };
+
+    try {
+      await sgMail.sendMultiple(msg);
+      res.status(200).send('Alerts sent');
+    } catch (error) {
+      console.error('Error sending emails:', error);
+      res.status(500).send('Error sending alerts');
+    }
+  });
 });
