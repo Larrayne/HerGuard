@@ -81,7 +81,7 @@ function MainPage() {
     <div className="app">
       <header className="header">
         <div className="greeting">
-          <h1>Hello, User!</h1>
+          <h1>Hello, Girl Pal!</h1>
           <Link to="/main-page/profile">
             <i className="fa-regular fa-user"></i>
           </Link>
