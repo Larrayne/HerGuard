@@ -142,6 +142,11 @@ function MainPage() {
             <i className="fa-regular fa-circle-question"></i>
           </button>
         </Link>
+        <Link to="/main-page/panic-mode">
+          <button className="footer-button profile">
+            <i className="fa-regular fa-circle-question"></i>
+          </button>
+        </Link>
       </footer>
     </div>
   );
